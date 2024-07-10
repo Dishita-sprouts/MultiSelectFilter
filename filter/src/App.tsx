@@ -1,11 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './sass/app.scss';
+import FilterDiv from './components/FilterDiv';
+import FilterItemDiv from './components/FilterItemDiv';
 
 function App() {
   return (
     <div className="App">
-      hlo
+     <FilterDiv/>
+    
     </div>
   );
 }

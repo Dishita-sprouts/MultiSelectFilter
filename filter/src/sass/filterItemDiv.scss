@@ -1,0 +1,27 @@
+.filterItemInnerDiv{
+ order: 1px solid black;
+  height: 250px;
+  width: 270px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #adabab transparent;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.1); 
+  background-color: white;
+  
+}
+.filterItemContainer{
+    display: flex;
+    justify-content: center;
+}
+.industryName{
+  text-align: left; 
+  padding: 4px;
+  
+  #deleteBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+

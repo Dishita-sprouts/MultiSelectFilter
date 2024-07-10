@@ -1,0 +1,82 @@
+.container {
+  height: 160px;
+  width: 300px;
+  border: 3px solid #e5dddd;
+  border-radius: 7px;
+  background-color: white;
+
+  
+  
+  .input-container {
+    position: relative;
+    display: inline-block;
+
+    .input-with-dropdown {
+      width: 292px;
+      height: 30px;
+      border-radius: 5px;
+      margin: 3px;
+      padding-right: 30px;
+      box-sizing: border-box;
+      
+    }
+     .input-with-dropdown:focus{
+      border-color: 2px solid rgb(17, 127, 229);
+     }
+    .dropdown-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 30px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .headerDiv {
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    .filter-icon-svg{
+      margin-right: 5px;
+    }
+
+    #numberOfIndus {
+      background-color: black;
+      height: 23px;
+      width: 37px;
+      color: white;
+      text-align: center;
+      padding: 2px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+
+  .selectedIndustry {
+    min-height: 100px;
+    overflow: auto;
+    .industryName {
+      background-color: rgb(239, 237, 237);
+      color: black;
+      margin: 3px;
+      padding: 5px;
+      border-radius: 5px;
+      display: inline-flex;
+      align-items: center;
+    }
+    #clearAllBtn{
+      border: none;
+      background-color: transparent;
+      color: rgb(7, 140, 223);
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+}
