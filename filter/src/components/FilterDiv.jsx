@@ -55,7 +55,7 @@ function FilterDiv() {
     setSelectedIndustries([]);
   };
 
-  // Calculate the height dynamically based on the number of selected industries
+
   const containerHeight =
     selectedIndustries.length > 0
       ? `${160 + selectedIndustries.length * 30}px`
@@ -97,6 +97,7 @@ function FilterDiv() {
 
       <br />
       <div className="input-container">
+        <img src="./assets/search.png" alt="search" />
         <input
           type="text"
           className="input-with-dropdown"
