@@ -1,10 +1,21 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import "../sass/filterItemDiv.scss";
 
-function FilterItemDiv(props) {
+interface IndustryType {
+  label: string;
+  id: string;
+}
+
+interface FilterItemDivProps {
+  data: IndustryType[];
+  onCheckboxChange: (id: string, checked: boolean) => void;
+  selectedIndustries: string[];
+}
+
+const FilterItemDiv: React.FC<FilterItemDivProps> = (props) => {
   const { data, onCheckboxChange, selectedIndustries } = props;
 
-  const handleCheckboxChange = (id, checked) => {
+  const handleCheckboxChange = (id: string, checked: boolean) => {
     onCheckboxChange(id, checked);
   };
 
@@ -18,7 +29,7 @@ function FilterItemDiv(props) {
                 type="checkbox"
                 id="selectAll"
                 checked={selectedIndustries.length === data.length}
-                onChange={(e) =>
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
                   handleCheckboxChange("selectAll", e.target.checked)
                 }
               />
@@ -31,7 +42,7 @@ function FilterItemDiv(props) {
                   type="checkbox"
                   id={element.id}
                   checked={selectedIndustries.includes(element.id)}
-                  onChange={(e) =>
+                  onChange={(e: ChangeEvent<HTMLInputElement>) =>
                     handleCheckboxChange(element.id, e.target.checked)
                   }
                 />
@@ -45,6 +56,6 @@ function FilterItemDiv(props) {
       </div>
     </div>
   );
-}
+};
 
 export default FilterItemDiv;
